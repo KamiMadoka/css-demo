@@ -1,0 +1,85 @@
+
+// 国旗从横比 3：2
+@flag_height: 300px;
+@flag_width: @flag_height * 3 / 2;
+@flag_unit: @flag_height / 2 / 10;
+
+// 五角星由 5 个内角分别为 36° 72° 72° 的等腰三角形绕底部中心旋转而来
+// triangle_height 为三角形高， star_large_triangle_width_half 为三角形底的一半
+@tan_angle72: 3.08; // Math.tan(Math.PI / 180 * 72)
+@star_large_triangle_height: @flag_unit * 3;
+@star_large_triangle_width_half: @star_large_triangle_height / @tan_angle72;
+@star_small_triangle_height: @flag_unit * 1;
+@star_small_triangle_width_half: @star_small_triangle_height / @tan_angle72;
+
+.get_triangle (@triangle_height, @triangle_width_half) {
+    width: 0;
+    height: 0;
+    border-bottom: @triangle_height solid yellow;
+    border-left: @triangle_width_half solid transparent;
+    border-right: @triangle_width_half solid transparent;
+    transform-origin: 50% 100%;
+    position: absolute
+}
+.get_star_wrap (@triangle_height, @triangle_width_half) {
+    height: @triangle_height;
+    width: @triangle_width_half * 2;
+    margin: auto;
+    transform-origin: 50% 100%;
+    position: absolute;
+}
+.get_position (@left_count, @top_count, @triangle_height, @triangle_width_half) {
+    left: @left_count * @flag_unit - @triangle_width_half;
+    top: @top_count * @flag_unit - @triangle_height;
+}
+
+.flag {
+    background-color: red;
+    width: @flag_width;
+    height: @flag_height;
+}
+
+.star_wrap_large {
+    .get_star_wrap(@star_large_triangle_height, @star_large_triangle_width_half);
+}
+.triangle_large {
+    .get_triangle(@star_large_triangle_height, @star_large_triangle_width_half);
+}
+.star_position_1 {
+    .get_position(5, 5, @star_large_triangle_height, @star_large_triangle_width_half);
+}
+
+.star_wrap_small {
+    .get_star_wrap(@star_small_triangle_height, @star_small_triangle_width_half);
+}
+.triangle_small {
+    .get_triangle(@star_small_triangle_height, @star_small_triangle_width_half);
+}
+.star_position_2 {
+    .get_position(10, 2, @star_small_triangle_height, @star_small_triangle_width_half);
+    transform: rotate(22deg);
+}
+.star_position_3 {
+    .get_position(12, 4, @star_small_triangle_height, @star_small_triangle_width_half);
+    transform: rotate(42deg);
+}
+.star_position_4 {
+    .get_position(12, 7, @star_small_triangle_height, @star_small_triangle_width_half);
+}
+.star_position_5 {
+    .get_position(10, 9, @star_small_triangle_height, @star_small_triangle_width_half);
+    transform: rotate(16deg);
+}
+
+.rotate_72 {
+    transform: rotate(72deg);
+}
+.rotate_-72 {
+    transform: rotate(-72deg);
+}
+.rotate_144 {
+    transform: rotate(144deg);
+}
+.rotate_-144 {
+    transform: rotate(-144deg);
+}
