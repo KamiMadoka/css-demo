@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fan</title>
+    <style>
+        @keyframes run {
+            from {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(90deg);
+            }
+
+            50% {
+                transform: rotate(180deg);
+            }
+
+            75% {
+                transform: rotate(270deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .fan-wrap {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            animation: 100ms run infinite;
+        }
+
+        .fan-wrap:hover {
+            animation-play-state: paused;
+        }
+
+        .fan-wrap>div {
+            background-color: pink;
+        }
+
+        .fan-cricle {
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            position: absolute;
+            top: 180px;
+            left: 180px;
+        }
+
+        .fan-leaf {
+            width: 200px;
+            height: 20px;
+            position: absolute;
+            top: 190px;
+            left: 200px;
+            transform-origin: 0 10px;
+        }
+
+        .roate-120 {
+            transform: rotate(120deg);
+        }
+
+        .roate-240 {
+            transform: rotate(240deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fan-wrap">
+        <div class="fan-cricle"></div>
+        <div class="fan-leaf"></div>
+        <div class="fan-leaf roate-120"></div>
+        <div class="fan-leaf roate-240"></div>
+    </div>
+</body>
+
+</html>
