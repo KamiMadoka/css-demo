@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="400">
+    <!-- 太极 -->
+    <g stroke="black">
+        <path d="M 200 200 a 40 40 0 0 0 0 80 a 80 80 0 0 0 0 -160 a 40 40 0 0 1 0 80 z" />
+        <circle cx="200" cy="240" r="15" fill="white" />
+
+        <path d="M 200 200 a 40 40 0 0 0 0 80 a 80 80 0 0 0 0 -160 a 40 40 0 0 1 0 80 z"
+            transform="translate(200, 200) rotate(180) translate(-200, -200)" fill="white" />
+        <circle cx="200" cy="160" r="15" />
+    </g>
+
+    <!-- 乾 -->
+    <g id="qian">
+        <g id="yang-yao-1" transform="translate(200, 200) rotate(45) translate(-200, -200)">
+            <path d="M 200 200 m 100 0 l 0 36.42 10 4 0 -81 -10 4 z " />
+        </g>
+        <g id="yang-yao-2" transform="translate(200, 200) rotate(45) translate(-200, -200)">
+            <path d="M 200 200 m 120 0 l 0 44.71 10 4 0 -97.7 -10 4 z " />
+        </g>
+        <g id="yang-yao-3" transform="translate(200, 200) rotate(45) translate(-200, -200)">
+            <path d="M 200 200 m 140 0 l 0 52.99 10 4 0 -114.26 -10 4 z " />
+        </g>
+    </g>
+    <!-- 坤 -->
+    <g id="kun">
+        <g id="yin-yao-1" transform="translate(200, 200) rotate(-45) translate(-200, -200)">
+            <path d="M 200 200 m 100 5 l 0 31.42  10 4 0 -35.5 z" />
+            <path d="M 200 200 m 100 -5 l 0 -31.42  10 -4 0 35.5 z" />
+        </g>
+        <g id="yin-yao-2" transform="translate(200, 200) rotate(-45) translate(-200, -200)">
+            <path d="M 200 200 m 120 5 l 0 39.71 10 4 0 -43.85 z" />
+            <path d="M 200 200 m 120 -5 l 0 -39.71  10 -4 0 43.85 z" />
+        </g>
+        <g id="yin-yao-3" transform="translate(200, 200) rotate(-45) translate(-200, -200)">
+            <path d="M 200 200 m 140 5 l 0 47.99 10 4 0 -52.13 z" />
+            <path d="M 200 200 m 140 -5 l 0 -47.99  10 -4 0 52.13 z" />
+        </g>
+    </g>
+    <!-- 离 -->
+    <g id="li">
+        <use xlink:href="#yang-yao-1" transform="translate(200, 200) rotate(-135) translate(-200, -200)"></use>
+        <use xlink:href="#yin-yao-2" transform="translate(200, 200) rotate(-45) translate(-200, -200)"></use>
+        <use xlink:href="#yang-yao-3" transform="translate(200, 200) rotate(-135) translate(-200, -200)"></use>
+    </g>
+    <!-- 兑 -->
+    <g id="dui">
+        <use xlink:href="#yang-yao-1" transform="translate(200, 200) rotate(-45) translate(-200, -200)"></use>
+        <use xlink:href="#yang-yao-2" transform="translate(200, 200) rotate(-45) translate(-200, -200)"></use>
+        <use xlink:href="#yin-yao-3" transform="translate(200, 200) rotate(45) translate(-200, -200)"></use>
+    </g>
+    <!-- 坎 -->
+    <g id="kan">
+        <use xlink:href="#yin-yao-1" transform="translate(200, 200) rotate(135) translate(-200, -200)"></use>
+        <use xlink:href="#yang-yao-2" transform="translate(200, 200) rotate(45) translate(-200, -200)"></use>
+        <use xlink:href="#yin-yao-3" transform="translate(200, 200) rotate(135) translate(-200, -200)"></use>
+    </g>
+    <!-- 艮 -->
+    <g id="gen">
+        <use xlink:href="#yin-yao-1" transform="translate(200, 200) rotate(180) translate(-200, -200)"></use>
+        <use xlink:href="#yin-yao-2" transform="translate(200, 200) rotate(180) translate(-200, -200)"></use>
+        <use xlink:href="#yang-yao-3" transform="translate(200, 200) rotate(90) translate(-200, -200)"></use>
+    </g>
+    <!-- 震 -->
+    <g id="zhen">
+        <use xlink:href="#yang-yao-1" transform="translate(200, 200) rotate(135) translate(-200, -200)"></use>
+        <use xlink:href="#yin-yao-2" transform="translate(200, 200) rotate(-135) translate(-200, -200)"></use>
+        <use xlink:href="#yin-yao-3" transform="translate(200, 200) rotate(-135) translate(-200, -200)"></use>
+    </g>
+    <!-- 巽 -->
+    <g id="xun">
+        <use xlink:href="#yin-yao-1" transform="translate(200, 200) rotate(-90) translate(-200, -200)"></use>
+        <use xlink:href="#yang-yao-2" transform="translate(200, 200) rotate(180) translate(-200, -200)"></use>
+        <use xlink:href="#yang-yao-3" transform="translate(200, 200) rotate(180) translate(-200, -200)"></use>
+    </g>
+</svg>

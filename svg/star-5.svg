@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="star-5" fill="red" stroke="red">
+        <g id="triangle">
+            <path d="M 100 100 l 15.45 0 -15.45 -47.55 -15.45 47.55 z" />
+        </g>
+        <use xlink:href="#triangle" transform="translate(100, 100) rotate(72) translate(-100, -100)"></use>
+        <use xlink:href="#triangle" transform="translate(100, 100) rotate(-72) translate(-100, -100)"></use>
+        <use xlink:href="#triangle" transform="translate(100, 100) rotate(144) translate(-100, -100)"></use>
+        <use xlink:href="#triangle" transform="translate(100, 100) rotate(-144) translate(-100, -100)"></use>
+    </g>
+</svg>
